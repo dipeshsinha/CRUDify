@@ -1,0 +1,14 @@
+label{
+  color: white;
+  font-size: larger;
+}
+h2{
+  color: white;
+}
+
+body{
+  background-color: blueviolet;
+}
+input.ng-invalid.ng-touched{
+  border: 3px solid red;
+}

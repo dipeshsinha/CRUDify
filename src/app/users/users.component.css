@@ -1,0 +1,22 @@
+body{
+  background-color: blueviolet;
+  height: 100vh;
+}
+table{
+  color: white;
+  font-size: large;
+}
+th,td{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: black;
+  cursor: pointer;
+}
+h1{
+  color: white;
+}

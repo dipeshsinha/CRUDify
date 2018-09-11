@@ -1,0 +1,60 @@
+<body>
+<div class="container">
+
+  <h2>Create new User</h2><br><br><hr>
+
+
+  <form (ngSubmit)="onsubmit(f)" #f="ngForm"> <!-- sending reference to onsubmit() function-->
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Name</label>
+      <input ngModel
+             type="text"
+             class="form-control"
+             name="firstname" id="exampleInputEmail1"
+             aria-describedby="emailHelp"
+             placeholder="Enter First Name"
+             required
+             #em="ngModel">                <!-- creating reference -->
+    </div>
+    <p style="color: darkred;"
+       class="help-block"
+       *ngIf="!em.valid && em.touched"> <!--make visible only when entry is invalid-->
+      Please enter a first name
+    </p>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Last Name</label>
+      <input ngModel
+             type="text"
+             class="form-control"
+             name="lastname"
+             id="exampleInputPassword2"
+             placeholder="Last Name"
+             required
+             #ln="ngModel">
+    </div>
+    <p style="color: darkred;"
+       class="help-block"
+       *ngIf="!ln.valid && ln.touched"> <!--make visible only when entry is invalid-->
+      Please enter a last name
+    </p>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Job</label>
+      <input ngModel
+             type="text"
+             class="form-control"
+             name="job"
+             id="exampleInputPassword1"
+             placeholder="Job"
+             required
+             #job="ngModel">
+    </div>
+    <p style="color: darkred;"
+       class="help-block"
+       *ngIf="!job.valid && job.touched">    <!--make visible only when entry is invalid-->
+      Please enter a job
+    </p>
+    <button type="submit" class="btn btn-warning" [disabled]="!f.valid">Create</button>
+  </form>
+</div>
+
+</body>

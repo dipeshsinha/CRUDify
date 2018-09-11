@@ -1,0 +1,20 @@
+<body>
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1" style="font-size: x-large;color: darkblue">CRUDify</span>
+</nav>
+<a href="#" routerLink="/users">
+  <nav class="navbar navbar-light bg-light hov" appCustomNav>
+    <div class="navbar-brand">Users</div>
+  </nav>
+</a>
+<a href="#" routerLink="/create">
+  <nav class="navbar navbar-light bg-light hov" appCustomNav> <!-- using custom directive -->
+    <div class="navbar-brand">Create User</div>
+  </nav>
+</a>
+<a href="#" class="navbar-fixed-bottom" (click)="signout()">
+  <nav class="navbar navbar-light bg-light hov" appCustomNav>
+    <div class="navbar-brand">Sign Out</div>
+  </nav>
+</a>
+</body>

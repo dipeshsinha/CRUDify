@@ -1,0 +1,55 @@
+<html>
+<body>
+<div style="height: 100vh;">
+  <div class="container" style="padding-top: 10%">
+    <h2>Signup</h2><br><hr>
+    <form (ngSubmit)="onSignUp(f)" #f="ngForm"> <!-- sending form reference to onsignup() function -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input ngModel
+               type="email"
+               class="form-control"
+               name="email" id="exampleInputEmail1"
+               aria-describedby="emailHelp"
+               placeholder="Enter email"
+               required
+               email
+               #em="ngModel"
+        >
+      </div>
+      <p style="color: darkred;"
+         class="help-block"
+         *ngIf="!em.valid && em.touched"> <!--make visible only when entry is invalid-->
+        Please enter a valid email
+      </p>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input ngModel
+               type="password"
+               class="form-control"
+               name="password"
+               id="exampleInputPassword1"
+               placeholder="Password"
+               #pas
+               required
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword2">Re enter Password</label>
+        <input ngModel
+               type="password"
+               class="form-control"
+               name="Reenterpassword"
+               id="exampleInputPassword2"
+               placeholder="Password"
+               required
+               #repas>
+      </div>
+      <button type="submit"
+              class="btn btn-warning"
+              [disabled]="!f.valid">Signup</button> <!-- disabled until form is valid -->
+    </form>
+  </div>
+</div>
+</body>
+</html>

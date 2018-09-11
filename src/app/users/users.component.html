@@ -1,0 +1,30 @@
+<body style="text-align: center">
+<div class="container">
+  <h1>Users</h1>
+</div>
+<table class="table">
+  <tr>
+    <th>ID</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Avatar</th>
+    <th>Edit user</th>
+    <th>Delete user</th>
+  </tr>
+
+  <tr *ngFor="let temp of data.data"> <!-- Looping through all objects received and outputting it in the table-->
+    <td>{{ temp.id }}</td>
+    <td>{{ temp.first_name }}</td>
+    <td>{{ temp.last_name }}</td>
+    <td><img src="{{ temp.avatar }}"> </td>
+    <td><a (click)="editPage(temp)">Edit</a></td> <!-- sending details of the object needed to edit-->
+    <td><a (click)="deleteUser(temp)">Delete</a></td> <!-- sending details of the object needed to delete-->
+  </tr>
+</table>
+<a (click)="pageBackwards()" *ngIf="currentpage>1 && currentpage<5">
+  previous page
+</a>.
+<a (click)="pageforward()" *ngIf="currentpage>0 && currentpage<4">next page
+</a>
+
+</body>

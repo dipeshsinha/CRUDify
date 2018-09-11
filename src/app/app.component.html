@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-2 no-pad" *ngIf="status==='no'">
+    <app-nav-login></app-nav-login>        <!-- using the status variable to change navbar according to user sign in -->
+  </div>
+  <div class="col-md-2 no-pad" *ngIf="status==='yes'">
+    <app-nav-main></app-nav-main>
+  </div>
+
+
+  <div class="col-md-10 no-pad">
+    <router-outlet></router-outlet>  <!-- router links will change the components according to the URL -->
+  </div>
+</div>

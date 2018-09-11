@@ -1,0 +1,8 @@
+body{
+  height: 100vh;
+  text-decoration: none;
+}
+.hov:hover{
+  background-color: blueviolet;
+  color: white;
+}
